@@ -1,4 +1,9 @@
 node_modules
 node_modules/
 
+cypress/videos
 cypress/screenshots
+cypress/fixtures/**
+
+allure-results
+allure-report
