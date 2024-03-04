@@ -21,7 +21,7 @@ Cypress.Commands.add("preencherTodosCamposComSucesso2", () => {
 
     cy.get(formStep.campoDeficiencia).click()
     cy.get(formStep.listaOpc).eq(1).click({ force: true })
-    cy.get(formStep.campoDescricaoDeficiencia).click()
+    cy.get(formStep.campoDescricaoDeficiencia).click({ force: true })
     cy.get(formStep.campoDescricaoDeficiencia).type('Descrição da deficiência')
     cy.get(formStep.campoMotivoInteresse).type('Motivo de interesse')
     cy.get(formStep.campoEnsinamento).type('Ensinamento Importante')
@@ -30,8 +30,8 @@ Cypress.Commands.add("preencherTodosCamposComSucesso2", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('/home/aron/DBC/VemSer/TF/captacao-qa-web-cypress/cypress/support/data/anexos/CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('/home/aron/DBC/VemSer/TF/captacao-qa-web-cypress/cypress/support/data/anexos/configurações do sistema.png', { force: true });
+    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\luiz.barbosa\\Desktop\\DBC\\TF\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
+    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\luiz.barbosa\\Desktop\\DBC\\TF\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
