@@ -1,0 +1,22 @@
+export default {
+campoNome: '[id="step-1-nome"]',
+erroCampoNome: '[id="step-1-nome-helper-text"]',
+campoEmail: '[id="step-1-email"]',
+erroCampoEmail: '[id="step-1-email-helper-text"]',
+campoRg:'[id="step-1-rg"]',
+erroCampoRg: '[id="step-1-rg-helper-text"]',
+campoCpf: '[id="step-1-cpf"]',
+erroCampoCpf:'[id="step-1-cpf-helper-text"]',
+campoTelefone:'[id="step-1-telefone"]',
+erroCampoTel:'[id="step-1-telefone-helper-text"]',
+campoDataNascimento: '[id="step-1-dataNascimento"]',
+erroCampoDataDeNascimento:'[id="step-1-dataNascimento-helper-text"]',
+campoCidade:'[id="step-1-cidade"]',
+erroCampoCidade: '[id="step-1-cidade-helper-text"]',
+campoEstado: '[id="step-1-estado"]',
+lista: '[role="option"]',
+campoNeurodiversidade: '[id="step-1-neurodiversidade-combo"]',
+btnProximo:'[id="step-1-enviar"]',
+checkedIcon:'[data-testid="CheckCircleIcon"]',
+campoNeurodivergenciaDescricao:'[id="step-1-neurodiversidade"]'
+}
