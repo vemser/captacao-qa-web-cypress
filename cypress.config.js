@@ -7,8 +7,8 @@ module.exports = defineConfig({
       allureWriter(on, config)
       return config
     },
-    viewportWidth: 1680,
-    viewportHeight: 1050,
+    viewportWidth: 1700,
+    viewportHeight: 1100,
     baseUrl: "http://vemser-dbc.dbccompany.com.br:39000/vemser/captacao-front",
   },
 });
