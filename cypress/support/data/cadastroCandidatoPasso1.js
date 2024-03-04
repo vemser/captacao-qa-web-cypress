@@ -18,7 +18,7 @@ export default {
   rg: faker.random.numeric(10),
   cpf: "30360155073",
   telefone: faker.phone.phoneNumber("(##) # ####-####"),
-  dataNascimento: `${ano}-${mes}-${dia}`,
+  dataNascimento: `${1990}-${mes}-${dia}`,
   cidade: faker.address.city(),
   estado: Math.floor(Math.random() * 27),
   possuiNeurodiversidade:temNeurodivesidade,
