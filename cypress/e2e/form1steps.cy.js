@@ -7,7 +7,14 @@ import geraDataNoPassado from "../support/utils/geraDataNoPassado"
 
 describe('Testes da primeira etapa do formulário de inscrição do Vem Ser', () => {
   beforeEach(() => {
+    cy.allure().feature("Primiro formulário de cadastro do candidato")
+    cy.allure().severity('Crítico');
+
     cy.visit("/subscription").wait(3000)
+  })
+
+  afterEach(() => {
+    cy.screenshot({ capture: 'runner' })
   })
 
   it('Test 1 - Validar preenchimento de campos com sucesso', () => {
