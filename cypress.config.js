@@ -9,6 +9,6 @@ module.exports = defineConfig({
     },
     viewportWidth: 1680,
     viewportHeight: 1050,
-    //baseUrl: "http://vemser-dbc.dbccompany.com.br:39000/vemser/captacao-front",
+    baseUrl: "http://vemser-dbc.dbccompany.com.br:39000/vemser/captacao-front",
   },
 });
