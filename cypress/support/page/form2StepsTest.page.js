@@ -13,20 +13,12 @@ Cypress.Commands.add("preencherTodosCamposComSucesso2", () => {
     cy.get(formStep.optsGenero).eq(2).click()
     cy.get('#s2-select-etnia-candidato').click()
     cy.get('[id="menu-etnia"] li').eq(2).click()
-    
-    cy.get(formStep.campoLinguagens).click()
-    cy.get(formStep.optsLinguagens).eq(0).click({ force: true })
-    cy.get(formStep.optsLinguagens).eq(1).click({ force: true })
-    cy.get(formStep.optsLinguagens).eq(2).click({ force: true })
-    cy.get(formStep.campoLinguagens).click({ force: true })
 
-    cy.get(formStep.optsTrilhas).eq(0).click({ force: true })
-    cy.get(formStep.optsTrilhas).eq(1).click({ force: true })
-    cy.get(formStep.optsTrilhas).eq(2).click({ force: true })
-    cy.get(formStep.optsTrilhas).eq(3).click({ force: true })
+    cy.get(formStep.optsTrilhas).eq(0).check()
+    cy.get(formStep.optsTrilhas).eq(1).check()
+    cy.get(formStep.optsTrilhas).eq(2).check()
+    cy.get(formStep.optsTrilhas).eq(3).check()
 
-   
-    
     cy.get(formStep.campoDeficiencia).click()
     cy.get(formStep.listaOpc).eq(1).click({ force: true })
     cy.get(formStep.campoDescricaoDeficiencia).click()
@@ -38,12 +30,16 @@ Cypress.Commands.add("preencherTodosCamposComSucesso2", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get(formStep.btnAddCv).click()
-    cy.get('input#fileInput').selectFile('C:\Users\luiz.barbosa\Desktop\DBC\TF\captacao-qa-web-cypress\cypress\support\data\anexos\CV - QA .pdf', { force: true });
+    cy.get('#s2-input-curriculo').selectFile('/home/aron/DBC/VemSer/TF/captacao-qa-web-cypress/cypress/support/data/anexos/CV-QA.pdf', { force: true });
+    cy.get('#s2-input-configuracoes').selectFile('/home/aron/DBC/VemSer/TF/captacao-qa-web-cypress/cypress/support/data/anexos/configurações do sistema.png', { force: true });
     
+    cy.get(formStep.btnLGPD).check()
 
-    cy.get(formStep.btnLGPD).click()
+    cy.get(formStep.campoLinguagens).click()
+    cy.get(formStep.optsLinguagens).eq(0).click({force:true})
+    cy.get(formStep.optsLinguagens).eq(1).click({force:true})
+    cy.get(formStep.optsLinguagens).eq(2).click({force:true})
+    cy.get("#menu- > div.MuiBackdrop-root.MuiBackdrop-invisible.css-esi9ax").click({force:true})
 
-
-
+    cy.get(formStep.botaoEnviar).click()
 })
