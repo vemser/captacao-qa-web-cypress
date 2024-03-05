@@ -22,6 +22,11 @@ Todos os pré-requisitos necessários para execução do projeto deverão ser de
 - [Node.js](https://nodejs.org/en)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
+## Documentação
+- [Plano de Testes](https://docs.google.com/document/d/1VYfTStATCmQv_4LrLfesFFRp3tFiYMGKj9X8MYQ-TIw)
+- [User Stories + Cenários de Testes](https://drive.google.com/file/d/1sUtOdkRkSD8SSjM0HYnmp3xVuOXup5Eh/view)
+- [Trello](https://trello.com/b/y0mKWbUq/captação-provas)
+
 <h3>Cloning</h3>
 
 Clone o projeto através do comando:
