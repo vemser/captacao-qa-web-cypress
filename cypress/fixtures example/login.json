@@ -1,0 +1,14 @@
+{
+  "gp": {
+    "usuario": "<user>",
+    "senha": "<password>"
+  },
+  "techlead": {
+    "usuario": "<user>",
+    "senha": "<password>"
+  },
+  "admin": {
+    "usuario": "<user>",
+    "senha": "<password>"
+  }  
+}
