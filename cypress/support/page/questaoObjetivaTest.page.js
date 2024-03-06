@@ -65,3 +65,13 @@ Cypress.Commands.add("editarQuestãoComSucesso", () => {
     cy.get(selectors.btnEdicaoSucesso).click()
     cy.get(selectors.msgEdicaoSucesso).should('contain', 'Questão objetiva editada com sucesso')
 })
+
+Cypress.Commands.add("listarQuestoesObjetivasComSucesso", () => {
+    cy.get(selectors.areaDeProvas).click()
+    cy.get(selectors.questao).click()
+    cy.get(selectors.selectTipoQuestao).click()
+    cy.get(selectors.selectTipoQuestao).should('be.visible')
+    cy.get(selectors.tipoQuestaoObjetiva).click()
+    cy.wait(4000)
+    cy.get(selectors.btnFiltrar).click({ force: true })
+})

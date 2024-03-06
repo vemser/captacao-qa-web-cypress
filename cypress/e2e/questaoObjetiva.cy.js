@@ -38,13 +38,23 @@ describe('Testes de Questão Objetiva', () => {
 
   })
 
-  it.only('Test 4 - Editar Questão Objetiva com sucesso', () => {
+  it('Test 4 - Editar Questão Objetiva com sucesso', () => {
     cy.fixture("login").then(({ techlead }) => {
       cy.preencherCamposDeLogin(techlead)
       cy.clicarEmLogin()
       cy.validarLogin("Olá, instrutor teste")
     })
     cy.editarQuestãoComSucesso()
+
+  })
+
+  it.only('Test 5 - Listar Questões Objetivaz com sucesso', () => {
+    cy.fixture("login").then(({ techlead }) => {
+      cy.preencherCamposDeLogin(techlead)
+      cy.clicarEmLogin()
+      cy.validarLogin("Olá, instrutor teste")
+    })
+    cy.listarQuestoesObjetivasComSucesso()
 
   })
 
