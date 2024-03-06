@@ -278,7 +278,7 @@ Cypress.Commands.add("ValidarSelecionandoMatriculadoCursoGraducaoNao", () => {
 })
 
 Cypress.Commands.add("semSelecionarNenhumNivelIngles", () => { 
-    cy.get(formStep.campoInstituicaoDeEnsino).type('Instituição de Ensino')
+    cy.get(formStep.campoInstituicaoDeEnsino).type('Instituição Ensino')
     cy.get(formStep.campoCurso).type('Curso')
     cy.get(formStep.campoNivelIngles).click()
     cy.get(formStep.niveisIngles).eq(1).click()
