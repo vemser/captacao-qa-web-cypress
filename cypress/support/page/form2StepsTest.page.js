@@ -41,5 +41,9 @@ Cypress.Commands.add("preencherTodosCamposComSucesso2", () => {
     cy.get(formStep.optsLinguagens).eq(2).click({force:true})
     cy.get("#menu- > div.MuiBackdrop-root.MuiBackdrop-invisible.css-esi9ax").click({force:true})
 
+    
+})
+
+Cypress.Commands.add("botaoEnviar", () => { 
     cy.get(formStep.botaoEnviar).click()
 })
