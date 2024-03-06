@@ -143,6 +143,4 @@ describe(' Form 2 Steps', () => {
       cy.get('[data-testid="instituicao"]').should('contain', 'O nome da instituição deve ter no máximo 80 letras')
     });
 
-      
-
   })
