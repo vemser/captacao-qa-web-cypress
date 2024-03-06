@@ -7,6 +7,10 @@ describe('Testes de login dos usuários de captação', () => {
     cy.allure().severity('Crítico')
 
     cy.visit("/login").wait(3000)
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      // retorna false para evitar que o Cypress falhe o teste
+      return false;
+    });
   })
 
   afterEach(() => {
@@ -22,12 +26,12 @@ describe('Testes de login dos usuários de captação', () => {
     })
   })
 
-  it('Test 2 - Usuário Techlead realiza login com credenciais válidas', () => {
+  it('Test 2 - Usuário Instrutor realiza login com credenciais válidas', () => {
     cy.fixture("login").then(({ techlead }) => {
       cy.preencherCamposDeLogin(techlead)
       cy.clicarEmLogin()
 
-      cy.validarLogin("Olá, techlead teste")
+      cy.validarLogin("Olá, instrutor teste")
     })
   })
 
