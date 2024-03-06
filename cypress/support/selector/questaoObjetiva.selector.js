@@ -1,0 +1,23 @@
+export default {
+    areaDeProvas: '#root > div.MuiBox-root.css-k008qs > nav > div > div > div > ul > div > ul > div > div',
+    questao: '[href="/vemser/captacao-front/area-de-provas/questoes"]',
+    questaoObjetiva: '#root > div.MuiBox-root.css-k008qs > main > main > div > div.flex.flex-wrap.justify-end.gap-5 > button:nth-child(2)',
+    titulo: 'input[name="titulo"]',
+    enunciado: 'textarea[name="enunciado"]',
+    dificuldade: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(3) > button',
+    selecionarDificuldade: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(3) > select',
+    campoAlternativa1: ':nth-child(6) > .space-y-2 > .justify-between > .items-center > [data-testid="alternativa"]',
+    campoAlternativa2: ':nth-child(7) > .space-y-2 > .justify-between > .items-center > [data-testid="alternativa"]',
+    selecionarAlternativaCorreta: '#correta-1',
+    adicionarAlternativa: '[data-testid="adicionar-alternativa"]',
+    btnCriarQuestao: '[data-testid="criar-questao"]',
+    msgErrorTituloInvalido: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(1)',
+    msgErrorEnunciadoInvalido: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(2)',
+    msgErrorDificuldadeInvalida: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(3)',
+    msgErrorAlternativaInvalida: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(6) > div',
+    msgErrorAlternativa2Invalida: '#root > div.MuiBox-root.css-k008qs > main > main > section > form > div:nth-child(7) > div',
+    titulo: ':nth-child(1) > .leading-none',
+    tipoQuestao: '#root > div.MuiBox-root.css-k008qs > main > main > div > div.flex.flex-row.items-end.justify-center.gap-8.mt-10.mb-9 > div:nth-child(1) > button',
+    selectTipoQuestao: '#root > div.MuiBox-root.css-k008qs > main > main > div > div.flex.flex-row.items-end.justify-center.gap-8.mt-10.mb-9 > div:nth-child(1) > select',
+    
+}
