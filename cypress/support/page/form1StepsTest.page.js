@@ -24,7 +24,7 @@ Cypress.Commands.add("preencherTodosCamposComSucesso", () => {
 })
 
 
-Cypress.Commands.add("preencherTodosOsCampos", (dados) => {
+Cypress.Commands.add("preencherTodosOsCamposInscricao", (dados) => {
   if (dados.nome) cy.get(formStep.campoNome).type(dados.nome)
   if (dados.email) cy.get(formStep.campoEmail).type(dados.email)
   if (dados.rg) cy.get(formStep.campoRg).type(dados.rg)

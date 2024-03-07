@@ -48,7 +48,7 @@ describe('Testes de Questão Objetiva', () => {
 
   })
 
-  it.only('Test 5 - Listar Questões Objetivaz com sucesso', () => {
+  it('Test 5 - Listar Questões Objetivaz com sucesso', () => {
     cy.fixture("login").then(({ techlead }) => {
       cy.preencherCamposDeLogin(techlead)
       cy.clicarEmLogin()

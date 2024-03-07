@@ -14,7 +14,7 @@ describe('Form 2 Steps', () => {
       cy.screenshot({ capture: 'runner' })
     })
   
-    it.only('Test 1 - Validar Preenchimento de campo com sucesso', () => {
+    it('Test 1 - Validar Preenchimento de campo com sucesso', () => {
       cy.preencherTodosCamposComSucesso()
       cy.clicarEmProximo()
       cy.preencherTodosCamposComSucesso2()
