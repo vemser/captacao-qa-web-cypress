@@ -1,4 +1,5 @@
 import formStep from "../selector/formSteps2.selector"
+import path from 'path'
 
 Cypress.Commands.add("preencherTodosCamposComSucesso2", () => { 
     cy.get(formStep.campoInstituicaoDeEnsino).type('Instituição de Ensino')
@@ -30,8 +31,14 @@ Cypress.Commands.add("preencherTodosCamposComSucesso2", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -78,8 +85,14 @@ Cypress.Commands.add("preencherSemSelecionarLinguagem", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+    
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
     
@@ -114,8 +127,14 @@ Cypress.Commands.add("preencherSemSelecionarTrilha", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -162,7 +181,12 @@ Cypress.Commands.add("preencherSemAdicionarCurriculo", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -209,7 +233,12 @@ Cypress.Commands.add("preencherSemAdicionarPrintPC", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -256,8 +285,14 @@ Cypress.Commands.add("SemSelecionarQueConcorda", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
 
     cy.get(formStep.campoLinguagens).click()
     cy.get(formStep.optsLinguagens).eq(0).click({force:true})
@@ -307,8 +342,15 @@ Cypress.Commands.add("semSelecionarNenhumNivelIngles", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -353,8 +395,14 @@ Cypress.Commands.add("semSelecionarNenhumNivelEspanhol", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -399,8 +447,14 @@ Cypress.Commands.add("preencherMotivoMenos10Caracteres", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -443,8 +497,14 @@ Cypress.Commands.add("preencherEnsinoMenos10Caracteres", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -487,8 +547,14 @@ Cypress.Commands.add("preencherNumeroCampoInstituicao", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -531,8 +597,14 @@ Cypress.Commands.add("preenchendoInstituicaoMais80Caracteres", () => {
     cy.get(formStep.campoGithub).type('https://github.com')
     cy.get(formStep.campoLinkedin).type('https://linkedin.com')
 
-    cy.get('#s2-input-curriculo').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\CV-QA.pdf', { force: true });
-    cy.get('#s2-input-configuracoes').selectFile('C:\\Users\\Debora\\OneDrive\\Documentos\\captacao-qa-web-cypress\\cypress\\support\\data\\anexos\\configurações do sistema.png', { force: true });
+    let scriptPath = __dirname
+    const basePath = scriptPath.replace('page', 'data')  
+
+    const curriculoPath = path.join(basePath, 'anexos', 'CV-QA.pdf')
+    const configPath = path.join(basePath, 'anexos', 'configuracoes-do-sistema.png')
+
+    cy.get('#s2-input-curriculo').selectFile(curriculoPath, { force: true });
+    cy.get('#s2-input-configuracoes').selectFile(configPath, { force: true });
     
     cy.get(formStep.btnLGPD).check()
 
@@ -540,7 +612,5 @@ Cypress.Commands.add("preenchendoInstituicaoMais80Caracteres", () => {
     cy.get(formStep.optsLinguagens).eq(0).click({force:true})
     cy.get(formStep.optsLinguagens).eq(1).click({force:true})
     cy.get(formStep.optsLinguagens).eq(2).click({force:true})
-    cy.get("#menu- > div.MuiBackdrop-root.MuiBackdrop-invisible.css-esi9ax").click({force:true})
-
-    
+    cy.get("#menu- > div.MuiBackdrop-root.MuiBackdrop-invisible.css-esi9ax").click({force:true})    
 })

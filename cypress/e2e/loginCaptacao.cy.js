@@ -3,11 +3,18 @@
 // TESTES FALHANDO DEVIDO ERROS NÃO TRATADOS NO FRONT-END
 describe('Testes de login dos usuários de captação', () => {
   beforeEach(() => {
+    cy.allure().feature("Login de usuários do captação")
+    cy.allure().severity('Crítico')
+
     cy.visit("/login").wait(3000)
     Cypress.on('uncaught:exception', (err, runnable) => {
       // retorna false para evitar que o Cypress falhe o teste
       return false;
     });
+  })
+
+  afterEach(() => {
+    cy.screenshot({ capture: 'runner' })
   })
 
   it('Test 1 - Usuário GP realiza login com credenciais válidas', () => {

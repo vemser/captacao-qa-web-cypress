@@ -4,7 +4,7 @@ import faker from '@faker-js/faker'
 export default () => {
   const temNeurodivesidade = Math.round(Math.random())
   
-  const data = faker.date.between(new Date("01-01-1970"), new Date("01-01-2000"))
+  const data = faker.date.between(new Date("01-01-1970").toISOString(), new Date("01-01-2000").toISOString())
   let dia = data.getDate()
   let mes = data.getMonth()
   const ano = data.getFullYear()
