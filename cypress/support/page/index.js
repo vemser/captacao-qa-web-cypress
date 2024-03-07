@@ -1,7 +1,10 @@
 export * from "./form1StepsTest.page"
 export * from "./loginCaptacao.page"
 export * from "./form2StepsTest.page"
+export * from "./provaDeletar.page"
+export * from "./provaVisualizar.page"
 export * from "./menu.page"
 export * from "./questoes.page"
 export * from "./questaoPratica.page"
 export * from "./questaoObjetivaTest.page"
+
