@@ -63,7 +63,7 @@ describe(' Form 2 Steps', () => {
       cy.clicarEmProximo()
       cy.preencherSemSelecionarTrilha()
       cy.botaoEnviar()
-      cy.get('#root > div.MuiBox-root.css-uqekie > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-1au9qiw > form > div:nth-child(12) > p').should('contain', 'A escolha de uma trilha é obrigatória')
+      cy.get('#root > div.MuiBox-root.css-uqekie > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-620t2 > form > div:nth-child(12) > p').should('contain', 'A escolha de uma trilha é obrigatória')
     })
 
     it.only('Test 8 - Validar sem adicionar curriculo', () => {
@@ -111,7 +111,7 @@ describe(' Form 2 Steps', () => {
       cy.botaoEnviar()
     });
 
-    it.only('Test 14 - Validar preenchendo motivo menos de 10 caracteres', () => {
+    it.only('Test 14 - Validar preenchendo "motivo" menos de 10 caracteres', () => {
       cy.preencherTodosCamposComSucesso()
       cy.clicarEmProximo()
       cy.preencherMotivoMenos10Caracteres()
@@ -119,7 +119,7 @@ describe(' Form 2 Steps', () => {
       cy.get('#s2-candidato-motivo-helper-text').should('contain', 'São necessários 10 caracteres, no mínimo')
     });
 
-    it.only('Test 15 - Validar preenchendo ensinamento menos de 10 caracteres', () => {
+    it.only('Test 15 - Validar preenchendo "ensinamento" menos de 10 caracteres', () => {
       cy.preencherTodosCamposComSucesso()
       cy.clicarEmProximo()
       cy.preencherEnsinoMenos10Caracteres()
