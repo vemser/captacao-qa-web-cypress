@@ -39,4 +39,5 @@ export default {
     campoGithub: '[id="s2-candidato-github"]',
     campoLinkedin: '[id="s2-candidato-linkedin"]',
     btnLGPD: '[id="s2-candidato-lgpd"] input',
+    msgErroInstituicao: '#instituicao-de-ensino-candidato-helper-text',
 }

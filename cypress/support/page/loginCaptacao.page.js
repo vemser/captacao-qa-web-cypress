@@ -10,12 +10,10 @@ Cypress.Commands.add("clicarEmLogin", () => {
 })
 
 Cypress.Commands.add("validarLogin", (mensagem) => {
-    cy.wait(120000)
     cy.get(selectors.boasVindasUsuario).should('have.text', mensagem)
 })
 
 Cypress.Commands.add("validarErro", (mensagem) => {
-  cy.wait(120000)
   cy.get(selectors.erroLogin).should('have.text', mensagem)
 })
 
