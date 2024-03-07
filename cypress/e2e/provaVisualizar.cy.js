@@ -1,7 +1,5 @@
 /// <reference types="cypress" />
 
-
-
 describe('prova visualizar', () => {
     beforeEach(() => {
       cy.visit("/login");
@@ -16,8 +14,6 @@ describe('prova visualizar', () => {
         cy.wait(1000); 
         cy.get(':nth-child(1) > .flex > [data-testid="visualizar-prova"] > a > [data-testid="VisibilityOutlinedIcon"] > path').click({ force: true });
         cy.get(':nth-child(1) > strong').should('contain', 'Versão da prova:')
-
-    
       });
     });
   });
